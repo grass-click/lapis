@@ -1,3 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins {
     kotlin("multiplatform")
 }
@@ -11,11 +15,19 @@ kotlin {
         freeCompilerArgs = listOf("-Xcontext-parameters")
     }
     jvm {}
-    sourceSets["commonMain"].dependencies {
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+    wasmJs {
+        browser()
     }
-    sourceSets["commonTest"].dependencies {
-        implementation(kotlin("test"))
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+            }
+        }
+        commonTest {
+            dependencies {
+                implementation(kotlin("test"))
+            }
+        }
     }
-    sourceSets["jvmMain"].dependencies {}
 }

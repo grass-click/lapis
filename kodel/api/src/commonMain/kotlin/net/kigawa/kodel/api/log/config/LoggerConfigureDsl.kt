@@ -1,8 +1,10 @@
 package net.kigawa.kodel.api.log.config
 
 import net.kigawa.kodel.api.log.LogLevel
+import net.kigawa.kodel.api.log.config.handler.HandlerConfig
 import net.kigawa.kodel.api.log.handler.LoggerHandler
 
+@Suppress("unused")
 open class LoggerConfigureDsl {
     val children = mutableMapOf<String, LoggerConfigureDsl>()
 
