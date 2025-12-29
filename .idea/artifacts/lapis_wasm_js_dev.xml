@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lapis-wasm-js-dev">
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
+    <root id="archive" name="lapis-wasm-js-dev.jar">
+      <element id="module-output" name="lapis.wasmJsMain" />
+    </root>
+  </artifact>
+</component>

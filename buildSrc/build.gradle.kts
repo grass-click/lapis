@@ -1,13 +1,7 @@
 plugins {
     `kotlin-dsl`
-    id("org.jetbrains.kotlin.jvm") version "2.2.21"
 }
 
-kotlin {
-    compilerOptions {
-        languageVersion.set(org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_0)
-    }
-}
 
 
 
@@ -16,7 +10,7 @@ repositories {
     gradlePluginPortal()
 }
 
-val kotlinVersion = "2.2.21"
+val kotlinVersion = "2.3.0"
 fun pluginId(pluginName: String, version: String) = "$pluginName:$pluginName.gradle.plugin:$version"
 fun kotlinPluginId(pluginName: String, version: String = kotlinVersion) =
     pluginId("org.jetbrains.kotlin.$pluginName", version)

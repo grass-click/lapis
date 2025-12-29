@@ -1,6 +1,5 @@
-
 plugins {
-    id("root")
+    id("app-root")
 }
 dependencies {
 }
