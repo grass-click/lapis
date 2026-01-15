@@ -3,4 +3,5 @@ object Version {
     const val KOTLIN = "2.3.0"
     const val KTOR = "3.3.3"
     const val LOGBACK = "1.4.14"
+    const val COMPOSE = "1.7.1"
 }
